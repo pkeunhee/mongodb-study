@@ -20,6 +20,7 @@ public class InitMongoService {
 		// Drop existing collections
 		mongoTemplate.dropCollection("role");
 		mongoTemplate.dropCollection("user");
+		mongoTemplate.dropCollection("article");
 
 		// Create new records
 		Role adminRole = new Role();
@@ -32,11 +33,11 @@ public class InitMongoService {
 
 		User john = new User();
 		john.setId(UUID.randomUUID().toString());
-		john.setFirstName("John");
-		john.setLastName("Smith");
+		john.setFirstName("geunhui");
+		john.setLastName("park");
 		john.setPassword("21232f297a57a5a743894a0e4a801fc3");
 		john.setRole(adminRole);
-		john.setUsername("john");
+		john.setUsername("park");
 
 		User jane = new User();
 		jane.setId(UUID.randomUUID().toString());

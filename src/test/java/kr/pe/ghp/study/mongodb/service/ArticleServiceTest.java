@@ -21,10 +21,19 @@ public class ArticleServiceTest extends BaseTestCase {
 	@Autowired
 	private ArticleService articleService;
 
-	//@Test
+	@Test
 	public void create() {
 		Article article = new Article();
+		article.setTitle("새글1");
+		article.setContents("내용1");
+
 		articleService.create(article);
+
+		Article article2 = new Article();
+		article2.setTitle("새글2");
+		article2.setContents("내용2");
+
+		articleService.create(article2);
 	}
 
 	@Test
